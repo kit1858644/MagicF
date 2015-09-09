@@ -36,7 +36,7 @@ class Main():
 
 			# 把文件寫入數據庫
 		for path in paths:
-				# 取得所有已隱藏列表
+				# 取得所有已隱藏列表.
 			if self.curs.execute("select * from hidden where path=:path", {"path": path}).fetchone(): exis_file.append(path)
 				# 自動判斷文件夾/文件, 寫入數據庫
 			elif os.path.isdir(path):
